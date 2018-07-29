@@ -48,4 +48,22 @@ function showObj(obj, name){
     return arr;
 }
 
-exports.showObj = showObj
+
+function showObjInHTML(obj, name, res){
+    try{
+        res.writeHead(202, {"Content-Type": "text/html"});
+        arr = showObj(obj, name);
+        for(var e of arr){
+            res.write(e.join(""));
+        }
+        res.write("<h4>fim!</h4>");
+        res.end();
+    }
+    catch(Err){
+        console.log(Err);
+        res.send("<h4>Some error has occurred</h4>");
+
+    }
+}
+exports.showObj = showObj;
+exports.showObjInHTML = showObjInHTML;

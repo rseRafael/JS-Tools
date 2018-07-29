@@ -1,0 +1,23 @@
+{
+  "name": "js-tools",
+  "version": "1.0.1",
+  "description": "my humble javascript tool library",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rseRafael/JS-Tools.git"
+  },
+  "author": "rseRafael",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rseRafael/JS-Tools/issues"
+  },
+  "homepage": "https://github.com/rseRafael/JS-Tools#readme",
+  "dependencies": {
+    "formidable": "^1.2.1",
+    "pdf2image": "^1.2.3"
+  }
+}
