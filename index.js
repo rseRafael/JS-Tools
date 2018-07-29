@@ -4,6 +4,7 @@ const showObjInHTML = require("./showObj").showObjInHTML;
 
 const http = require("http");
 const pdf2image =require("pdf2image");
+const formidable = require("formidable");
 
 app.get("/request", (req, res)=>{
     showObjInHTML(req, "Request", res);
@@ -17,6 +18,9 @@ app.get("/http", (req, res)=>{
 app.get("/pdf2image", (req, res)=>{
     showObjInHTML(pdf2image, "Pdf2Image", res);
 });
+app.get("/formidable", (req, res)=>{
+    showObjInHTML(formidable, "Formidable", res);
+})
 
 
 app.get("/", (req, res)=>{
@@ -26,6 +30,7 @@ app.get("/", (req, res)=>{
     <a href="/response">Response</a>
     <a href="/http">Http</a>
     <a href="/pdf2image">Pdf2Image</a>
+    <a href="/formidable">Formidable</a>
     `;
     res.end(content);
 });
